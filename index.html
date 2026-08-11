@@ -1,97 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Purvi Chhatbar | Digital Marketing & Shopify Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purvi Chhatbar | Freelance Digital Marketer</title>
+<meta name="description" content="Purvi Chhatbar — Freelance Digital Marketer focused on performance marketing, Meta Ads, Google Ads, social media, lead generation, AI creatives and growth.">
 <style>
-  :root{
-    --bg:#120a24; --panel:#1d1238; --panel2:#26164a; --text:#fffafd; --muted:#c9b8dc;
-    --cyan:#00f0ff; --blue:#7c4dff; --pink:#ff3cac; --orange:#ff9a3c; --line:rgba(255,255,255,.12);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at 15% 10%,rgba(255,60,172,.18) 0,transparent 28%),radial-gradient(circle at 85% 20%,rgba(0,240,255,.15) 0,transparent 26%),linear-gradient(135deg,#0f071d,#1b0d33 45%,#0d1630);color:var(--text);overflow-x:hidden;background-size:140% 140%;animation:bgShift 14s ease-in-out infinite}
-  a{color:inherit;text-decoration:none}
-  nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;background:rgba(18,10,36,.68);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.18)}
-  .brand{font-size:20px;font-weight:800;letter-spacing:.5px}.brand span{color:var(--cyan)}
-  .navlinks{display:flex;gap:22px;font-size:14px;color:var(--muted)}
-  .navlinks a:hover{color:var(--cyan)}
-  section{min-height:100vh;padding:110px 8vw 80px;display:flex;align-items:center;position:relative}
-  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:50px}
-  .eyebrow{display:inline-flex;gap:10px;align-items:center;padding:9px 14px;border:1px solid rgba(39,225,193,.35);border-radius:999px;color:var(--cyan);background:rgba(39,225,193,.07);font-size:13px;margin-bottom:24px}
-  .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan);animation:pulse 1.6s infinite}
-  h1{font-size:clamp(52px,7vw,92px);line-height:.95;letter-spacing:-3px;margin-bottom:24px}
-  h1 .grad{background:linear-gradient(90deg,var(--cyan),#7aa2ff,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .lead{font-size:20px;line-height:1.7;color:var(--muted);max-width:760px}
-  .cta{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
-  .btn{padding:14px 20px;border-radius:12px;font-weight:700;border:1px solid var(--line);transition:.25s}
-  .btn.primary{background:linear-gradient(90deg,var(--pink),var(--orange));color:white;box-shadow:0 10px 30px rgba(255,60,172,.25)}
-  .btn:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(39,225,193,.15)}
-  .hero-card{background:linear-gradient(180deg,rgba(38,22,74,.92),rgba(19,10,38,.92));border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:28px;box-shadow:0 30px 90px rgba(0,0,0,.4),0 0 60px rgba(124,77,255,.12);animation:float 5s ease-in-out infinite, glow 4s ease-in-out infinite}
-  .metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
-  .metric{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:18px;padding:20px}
-  .metric b{font-size:30px;display:block;background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .chart{height:130px;border-radius:16px;background:linear-gradient(180deg,rgba(92,124,250,.20),transparent),repeating-linear-gradient(90deg,transparent 0 49px,rgba(255,255,255,.05) 50px),repeating-linear-gradient(0deg,transparent 0 31px,rgba(255,255,255,.05) 32px);position:relative;overflow:hidden;margin-top:16px}
-  .chart:after{content:"";position:absolute;left:0;right:0;bottom:18px;height:70px;background:linear-gradient(135deg,transparent 0 12%,var(--cyan) 13% 15%,transparent 16% 27%,var(--blue) 28% 30%,transparent 31% 44%,var(--pink) 45% 47%,transparent 48%);filter:drop-shadow(0 0 10px rgba(39,225,193,.35))}
-  .section-title{font-size:46px;letter-spacing:-1px;margin-bottom:18px}.section-sub{color:var(--muted);max-width:760px;line-height:1.7;margin-bottom:36px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;width:100%}
-  .card{background:linear-gradient(180deg,rgba(38,22,74,.88),rgba(20,10,39,.9));border:1px solid var(--line);border-radius:22px;padding:26px;transition:.35s;position:relative;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.18)}
-  .card:before{content:"";position:absolute;inset:-2px;background:linear-gradient(120deg,transparent 20%,rgba(39,225,193,.2),transparent 55%);transform:translateX(-100%);transition:.6s}
-  .card:hover:before{transform:translateX(100%)}
-  .card:hover{transform:translateY(-10px) rotateX(2deg);border-color:rgba(255,60,172,.45);box-shadow:0 22px 60px rgba(255,60,172,.12)}
-  .icon{font-size:30px;margin-bottom:16px}.card h3{font-size:22px;margin-bottom:12px}.card p,.card li{color:var(--muted);line-height:1.65}.card ul{padding-left:18px}
-  .timeline{display:grid;gap:24px;width:100%;max-width:980px}.timeline-item{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:26px;border-left:2px solid var(--cyan);background:rgba(255,255,255,.03);border-radius:0 18px 18px 0}.date{color:var(--cyan);font-weight:700}
-  .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.tag{padding:8px 11px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:#dce7f5;background:rgba(255,255,255,.03)}
-  .contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;width:100%}.contact-box{padding:30px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.04)}
-  footer{padding:28px 8vw;border-top:1px solid var(--line);color:var(--muted);text-align:center}
-  .reveal{opacity:0;transform:translateY(35px);transition:all .8s ease}.reveal.active{opacity:1;transform:none}
-  @keyframes pulse{50%{opacity:.35;transform:scale(1.6)}}
-  @keyframes float{50%{transform:translateY(-14px) rotate(1deg)}}
-  @keyframes glow{50%{box-shadow:0 30px 90px rgba(0,0,0,.4),0 0 80px rgba(255,60,172,.22)}}
-  @keyframes bgShift{50%{background-position:100% 50%}}
-  @keyframes ticker{to{transform:translateX(-50%)}}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  @media(max-width:900px){.hero,.contact{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.navlinks{display:none}.timeline-item{grid-template-columns:1fr}section{padding-left:6vw;padding-right:6vw}}
-  @media(max-width:600px){.grid{grid-template-columns:1fr}h1{letter-spacing:-1px}.lead{font-size:17px}.metric-grid{grid-template-columns:1fr}.section-title{font-size:38px}}
-
-  .orb{position:fixed;border-radius:50%;filter:blur(12px);opacity:.24;pointer-events:none;z-index:-1}.orb.one{width:280px;height:280px;background:var(--pink);top:14%;left:-80px;animation:float 7s ease-in-out infinite}.orb.two{width:220px;height:220px;background:var(--cyan);right:-60px;top:55%;animation:float 8s ease-in-out infinite reverse}.ticker{position:absolute;bottom:0;left:0;right:0;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.03)}.ticker-track{display:flex;gap:44px;width:max-content;padding:12px 0;animation:ticker 18s linear infinite}.ticker span{font-size:12px;letter-spacing:1.8px;color:var(--muted);text-transform:uppercase}.ring{position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.08);border-radius:50%;right:4vw;top:18vh;animation:spin 24s linear infinite;z-index:-1}.ring:after{content:"";position:absolute;width:14px;height:14px;border-radius:50%;background:var(--orange);top:12px;left:50%;box-shadow:0 0 24px var(--orange)}
+:root{--bg:#070b14;--surface:#0d1321;--surface2:#111a2b;--line:#22304a;--text:#f8fbff;--muted:#9aa9bf;--blue:#35bdf6;--violet:#8b5cf6;--green:#32d583;--orange:#ffb020}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;width:420px;height:420px;border-radius:50%;filter:blur(100px);opacity:.12;z-index:-1;animation:drift 12s ease-in-out infinite alternate}
+body:before{background:var(--blue);left:-180px;top:120px}body:after{background:var(--violet);right:-180px;top:480px;animation-delay:2s}
+@keyframes drift{to{transform:translate(80px,50px) scale(1.2)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:17px 6%;background:#070b14dd;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff0b}
+.logo{font-size:19px;font-weight:900;letter-spacing:1px}.logo i{font-style:normal;color:var(--blue)}
+nav a{color:#d7e1ee;text-decoration:none;font-size:14px;margin-left:25px}.navcta{padding:10px 15px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--violet));color:white!important;font-weight:800}
+section{padding:110px 7%;position:relative}.hero{min-height:100vh;display:flex;align-items:center;padding-top:130px}
+.wrap{max-width:1180px;margin:auto;width:100%}.heroGrid{display:grid;grid-template-columns:1.12fr .88fr;gap:65px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #35bdf644;background:#35bdf60d;border-radius:999px;padding:8px 12px;color:#bcecff;font-size:12px;font-weight:900;letter-spacing:.6px;margin-bottom:23px}
+.badge span{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}
+h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-4px;margin-bottom:25px}.grad{background:linear-gradient(90deg,#fff 20%,#75d9ff 52%,#bba2ff);-webkit-background-clip:text;color:transparent}
+.lead{font-size:19px;line-height:1.75;color:var(--muted);max-width:720px}.buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 19px;border-radius:12px;text-decoration:none;font-weight:850;transition:.3s}.primary{background:linear-gradient(135deg,var(--blue),var(--violet));color:white;box-shadow:0 15px 45px #35bdf622}.secondary{border:1px solid #ffffff17;color:white;background:#ffffff06}.btn:hover{transform:translateY(-3px)}
+.stats{display:flex;gap:35px;margin-top:36px}.stats b{display:block;font-size:25px}.stats span{font-size:12px;color:var(--muted)}
+.panel{background:linear-gradient(155deg,#101c31,#0a101d);border:1px solid #ffffff12;border-radius:26px;padding:22px;box-shadow:0 35px 100px #0009;animation:levitate 5s ease-in-out infinite}
+@keyframes levitate{50%{transform:translateY(-12px)}}.paneltop{display:flex;justify-content:space-between;color:#a9bad0;font-size:12px}.live{color:var(--green)}
+.graph{height:185px;margin:25px 0 18px;border-bottom:1px solid #ffffff12}.graph svg{width:100%;height:100%}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.kpi{padding:14px;background:#ffffff07;border:1px solid #ffffff0b;border-radius:13px}.kpi strong{font-size:21px;display:block}.kpi small{color:var(--muted)}
+.marquee{overflow:hidden;border-top:1px solid #ffffff0b;border-bottom:1px solid #ffffff0b;padding:16px 0;color:#8da2bc;white-space:nowrap}.track{display:inline-block;animation:scroll 22s linear infinite}.track span{margin:0 22px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px}.track b{color:var(--blue)}@keyframes scroll{to{transform:translateX(-50%)}}
+.center{text-align:center;max-width:800px;margin:0 auto 50px}.eyebrow{color:#71d7ff;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:900;margin-bottom:12px}.center h2{font-size:clamp(36px,5vw,58px);letter-spacing:-2.5px;margin-bottom:15px}.center p{color:var(--muted);line-height:1.75}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;max-width:1120px;margin:auto}.card{position:relative;overflow:hidden;padding:28px;border-radius:20px;border:1px solid #ffffff10;background:linear-gradient(155deg,#101a2b,#0b1220);transition:.35s}.card:before{content:"";position:absolute;right:-70px;top:-70px;width:160px;height:160px;border-radius:50%;background:#35bdf60b}.card:hover{transform:translateY(-8px);border-color:#35bdf655;box-shadow:0 24px 65px #0007}.icon{font-size:30px;margin-bottom:18px}.card h3{font-size:21px;margin-bottom:10px}.card p{color:var(--muted);line-height:1.7}
+.steps{counter-reset:n}.step .num{color:var(--blue);font-size:12px;font-weight:900;margin-bottom:15px}
+.case{max-width:1050px;margin:auto;border-top:1px solid var(--line);display:grid;grid-template-columns:.65fr 1.35fr;gap:40px;padding:35px 0}.case h3{font-size:27px}.case .role{color:var(--blue);margin-top:8px}.case li{color:var(--muted);line-height:1.75;margin:7px 0}.case ul{padding-left:19px}
+.ai{background:linear-gradient(145deg,#151535,#0e1225);border-color:#8b5cf644}.pills{margin-top:17px}.pill{display:inline-block;padding:7px 10px;border-radius:999px;border:1px solid #8b5cf644;background:#8b5cf614;color:#d9ccff;font-size:11px;margin:3px}
+.why{max-width:1000px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}.why .card strong{color:white}.why .card p{margin-top:9px}
+.contact{max-width:900px;text-align:center;margin:auto}.contact h2{font-size:clamp(42px,6vw,72px);letter-spacing:-3px}.contact p{color:var(--muted);font-size:18px;line-height:1.75;margin:18px auto;max-width:680px}
+footer{text-align:center;padding:30px 7%;border-top:1px solid #ffffff0b;color:#6e829b;font-size:13px}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){nav .links{display:none}.heroGrid,.case,.why{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.stats{gap:18px}.hero{padding-top:120px}h1{letter-spacing:-2.5px}.panel{animation:none}}
 </style>
 </head>
-<body><div class="orb one"></div><div class="orb two"></div><div class="ring"></div>
-<nav><div class="brand">Purvi<span>.</span></div><div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#ai-creative">AI Creative</a><a href="#contact">Contact</a></div></nav>
+<body>
+<nav><div class="logo">PURVI<span>.</span></div><div class="links"><a href="#services">Services</a><a href="#process">Process</a><a href="#experience">Experience</a><a href="#ai">AI Creative</a><a href="#contact">Contact</a></div><a class="navcta" href="mailto:purvichhatbar99@gmail.com?subject=Digital Marketing Consultation">Let's Talk</a></nav>
 
-<section class="hero" id="home">
-  <div class="reveal active">
-    <div class="eyebrow"><span class="dot"></span> Available for digital growth opportunities</div>
-    <h1>I build brands that <span class="grad">perform.</span></h1>
-    <p class="lead">I’m Purvi Chhatbar — a Shopify Developer and Digital Marketing Executive focused on e-commerce growth, paid campaigns, SEO, analytics, content, and conversion-focused digital experiences.</p>
-    <div class="cta"><a class="btn primary" href="#projects">Explore My Work</a><a class="btn" href="mailto:purvichhatbar99@gmail.com">Contact Me</a></div>
-  </div>
-  <div class="hero-card reveal active">
-    <small style="color:var(--muted)">DIGITAL GROWTH DASHBOARD</small>
-    <div class="chart"></div>
-    <div class="metric-grid"><div class="metric"><b>Shopify</b><span>Store development & management</span></div><div class="metric"><b>Meta Ads</b><span>Campaign planning & optimization</span></div><div class="metric"><b>GA4</b><span>Traffic & behaviour analysis</span></div><div class="metric"><b>SEO</b><span>Visibility & organic growth</span></div></div>
-  </div>
-<div class="ticker"><div class="ticker-track"><span>Meta Ads</span><span>Google Ads</span><span>Shopify</span><span>GA4</span><span>SEO</span><span>Social Media</span><span>Content Strategy</span><span>Performance Marketing</span><span>AI Videos</span><span>AI Images</span><span>Meta Ads</span><span>Google Ads</span><span>Shopify</span><span>GA4</span><span>SEO</span><span>Social Media</span><span>Content Strategy</span><span>Performance Marketing</span><span>AI Videos</span><span>AI Images</span></div></div></section>
+<section class="hero"><div class="wrap heroGrid">
+<div class="reveal">
+<div class="badge"><span></span> FREELANCE DIGITAL MARKETER · PERFORMANCE MARKETING</div>
+<h1>More visibility.<br><span class="grad">More leads. Better growth.</span></h1>
+<p class="lead">I'm Purvi Chhatbar. I help businesses build a stronger online presence through performance marketing, Meta Ads, Google Ads, social media, creative content, AI-powered visuals, SEO and data-driven optimization.</p>
+<div class="buttons"><a class="btn primary" href="#contact">Get a Free Strategy Call →</a><a class="btn secondary" href="#services">See My Services</a></div>
+<div class="stats"><div><b>2+</b><span>Years experience</span></div><div><b>360°</b><span>Digital marketing support</span></div><div><b>1:1</b><span>Freelance partnership</span></div></div>
+</div>
+<div class="panel reveal"><div class="paneltop"><span>PERFORMANCE DASHBOARD</span><span class="live">● LIVE</span></div>
+<div class="graph"><svg viewBox="0 0 500 185" preserveAspectRatio="none"><polyline points="0,160 45,151 90,155 130,126 175,138 220,101 265,114 310,75 355,88 400,50 450,61 500,22" fill="none" stroke="#35bdf6" stroke-width="4"/><polyline points="0,170 50,166 100,162 150,158 200,150 250,147 300,135 350,129 400,118 450,107 500,98" fill="none" stroke="#8b5cf6" stroke-width="3"/></svg></div>
+<div class="kpis"><div class="kpi"><strong>Reach</strong><small>Audience growth</small></div><div class="kpi"><strong>Leads</strong><small>Customer intent</small></div><div class="kpi"><strong>ROI</strong><small>Optimization</small></div></div></div>
+</div></section>
 
-<section id="about"><div style="width:100%"><h2 class="section-title reveal">Marketing mindset. Technical execution.</h2><p class="section-sub reveal">I combine digital marketing strategy with hands-on Shopify development. My work covers the full customer journey — from ad discovery and website experience to analytics, optimization, support, and retention.</p><div class="grid"><div class="card reveal"><div class="icon">📈</div><h3>Performance Focus</h3><p>Campaign planning, audience targeting, budget optimization, KPI monitoring, and reporting.</p></div><div class="card reveal"><div class="icon">🛍️</div><h3>E-commerce Execution</h3><p>Shopify customization, products, collections, navigation, payments, shipping, and content management.</p></div><div class="card reveal"><div class="icon">🎯</div><h3>Brand Growth</h3><p>SEO, social media management, AI-powered creatives, content planning, and customer engagement.</p></div></div></div></section>
+<div class="marquee"><div class="track"><span>Meta Ads <b>✦</b></span><span>Google Ads <b>✦</b></span><span>Lead Generation <b>✦</b></span><span>Social Media <b>✦</b></span><span>AI Creatives <b>✦</b></span><span>Analytics <b>✦</b></span><span>SEO <b>✦</b></span><span>Campaign Optimization <b>✦</b></span><span>Meta Ads <b>✦</b></span><span>Google Ads <b>✦</b></span><span>Lead Generation <b>✦</b></span><span>Social Media <b>✦</b></span></div></div>
 
-<section id="skills"><div style="width:100%"><h2 class="section-title reveal">Core capabilities</h2><p class="section-sub reveal">A practical mix of marketing platforms, e-commerce systems, analytics, creative tools, and web technologies.</p><div class="grid"><div class="card reveal"><h3>Digital Marketing</h3><div class="tags"><span class="tag">Meta Ads</span><span class="tag">Google Ads</span><span class="tag">GA4</span><span class="tag">SEO</span><span class="tag">Social Media</span><span class="tag">Content Marketing</span><span class="tag">Performance Reporting</span></div></div><div class="card reveal"><h3>Shopify & E-commerce</h3><div class="tags"><span class="tag">Theme Customization</span><span class="tag">Store Management</span><span class="tag">Products & Collections</span><span class="tag">Navigation</span><span class="tag">Payments & Shipping</span><span class="tag">Website Optimization</span></div></div><div class="card reveal"><h3>Technical & Creative</h3><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C/C++</span><span class="tag">AI Content</span><span class="tag">AI Video Creation</span><span class="tag">AI Image Creation</span><span class="tag">MS Office</span></div></div></div></div></section>
+<section id="services"><div class="center reveal"><div class="eyebrow">What I do for businesses</div><h2>Marketing built around your business goal.</h2><p>You don't need random posts or ads. You need a clear strategy that connects your audience, creative, campaigns and measurement.</p></div>
+<div class="grid">
+<div class="card reveal"><div class="icon">🎯</div><h3>Performance Marketing</h3><p>Campaign planning, audience targeting, budget allocation, creative testing, monitoring, optimization and performance reporting.</p></div>
+<div class="card reveal"><div class="icon">📈</div><h3>Meta Ads</h3><p>Facebook and Instagram advertising focused on awareness, traffic, engagement, leads and conversion opportunities.</p></div>
+<div class="card reveal"><div class="icon">🔎</div><h3>Google Ads</h3><p>Search and brand campaigns designed to put your business in front of people actively looking for relevant products or services.</p></div>
+<div class="card reveal"><div class="icon">📱</div><h3>Social Media Marketing</h3><p>Content planning, creative direction, scheduling, engagement and promotional campaigns that keep your brand consistent and active.</p></div>
+<div class="card reveal"><div class="icon">🧲</div><h3>Lead Generation</h3><p>Build campaigns around the right audience and offer, with clear calls-to-action and continuous performance improvement.</p></div>
+<div class="card reveal"><div class="icon">📊</div><h3>Analytics & Optimization</h3><p>Use campaign and website data to understand what is working, find weak points and make smarter marketing decisions.</p></div>
+<div class="card reveal"><div class="icon">🔍</div><h3>SEO & Visibility</h3><p>Support your organic presence with basic SEO, website optimization and content direction for stronger search visibility.</p></div>
+<div class="card reveal"><div class="icon">✍️</div><h3>Content Strategy</h3><p>Plan content around audience needs, business offers, promotional moments and the platforms where your customers spend time.</p></div>
+<div class="card reveal"><div class="icon">🚀</div><h3>Campaign Optimization</h3><p>Monitor results, identify opportunities, test creatives and audiences, and continuously improve campaign performance.</p></div>
+</div></section>
 
-<section id="work"><div style="width:100%"><h2 class="section-title reveal">Professional experience</h2><div class="timeline"><div class="timeline-item reveal"><div class="date">March 2025 — Present</div><div><h3>Shopify Developer & Digital Marketing Executive</h3><p style="color:var(--cyan);margin:6px 0 12px">Satish and Brothers</p><ul style="padding-left:18px;color:var(--muted);line-height:1.7"><li>Develop and customize Shopify websites according to business requirements.</li><li>Manage store products, collections, navigation, payments, shipping, and website content.</li><li>Plan and optimize Meta and Google Ads campaigns.</li><li>Analyze traffic and user behaviour with Google Analytics 4.</li><li>Manage social media calendars, engagement, creatives, SEO, and campaign reporting.</li><li>Coordinate client communication, support, promotions, and seasonal updates.</li></ul></div></div></div></div></section>
+<section id="process"><div class="center reveal"><div class="eyebrow">My process</div><h2>From business goal to growth.</h2><p>A simple, transparent process that keeps marketing connected to what your business actually wants to achieve.</p></div>
+<div class="grid steps">
+<div class="card step reveal"><div class="num">01 / DISCOVER</div><h3>Understand</h3><p>Business goals, target audience, offer, competitors, current marketing and biggest growth challenges.</p></div>
+<div class="card step reveal"><div class="num">02 / STRATEGIZE</div><h3>Plan</h3><p>Choose the right channels, campaign structure, creative direction, audience and measurement approach.</p></div>
+<div class="card step reveal"><div class="num">03 / LAUNCH</div><h3>Execute</h3><p>Launch campaigns, publish content, create creatives and put the marketing strategy into action.</p></div>
+<div class="card step reveal"><div class="num">04 / OPTIMIZE</div><h3>Improve</h3><p>Review performance, test new ideas, reduce wasted spend and focus on what creates better opportunities.</p></div>
+</div></section>
 
-<section id="projects"><div style="width:100%"><h2 class="section-title reveal">Selected projects</h2><p class="section-sub reveal">Academic projects that strengthened my development, system thinking, and user experience skills.</p><div class="grid"><div class="card reveal"><div class="icon">🎨</div><h3>Art Gallery Management System</h3><p>PHP and MySQL platform for adding and managing artwork, sketches, and paintings in a user-friendly exhibition-style website.</p></div><div class="card reveal"><div class="icon">✈️</div><h3>Airline Management System</h3><p>Java-based application with ticket booking and flight timetable functionality.</p></div><div class="card reveal"><div class="icon">🏗️</div><h3>Construction Website</h3><p>Five-page HTML and CSS website featuring Home, Gallery, Our Team, Contact Us, and About Us sections.</p></div><div class="card reveal"><div class="icon">🎓</div><h3>Student Management System</h3><p>C++ project supporting student record operations such as add, update, and delete.</p></div></div></div></section>
+<section id="experience"><div class="center reveal"><div class="eyebrow">Professional experience</div><h2>Hands-on digital marketing experience.</h2><p>My professional experience includes campaign management, social media, analytics, AI-powered creative content, SEO support and client communication.</p></div>
+<div class="case reveal"><div><div class="eyebrow">MARCH 2025 — PRESENT</div><h3>Satish and Brothers</h3><div class="role">Digital Marketing Executive</div></div><div><ul><li>Created, launched, managed and optimized Meta advertising campaigns from campaign setup through performance analysis.</li><li>Managed audience targeting, budget allocation, campaign optimization and performance reporting.</li><li>Created and optimized Google Ads campaigns, including Search and Brand campaigns.</li><li>Managed business social media accounts, created content, scheduled posts, boosted posts and supported audience engagement.</li><li>Used Google Analytics to monitor website traffic, user behaviour and campaign performance.</li><li>Created AI-generated marketing creatives and promotional content for websites and social media.</li><li>Supported SEO activities to improve online visibility and organic reach.</li><li>Coordinated with clients to understand business goals and deliver customized digital marketing solutions.</li></ul></div></div></section>
 
-<section id="ai-creative"><div style="width:100%"><h2 class="section-title reveal">AI-powered creative production</h2><p class="section-sub reveal">I create different types of AI-generated videos and images for digital marketing, social media, advertising, e-commerce, branding, and promotional campaigns. My focus is on making content that is visually strong, platform-ready, and aligned with the business goal.</p><div class="grid"><div class="card reveal"><div class="icon">🎬</div><h3>AI Video Creation</h3><p>I create product videos, promotional videos, social media reels, ad videos, cinematic clips, talking-avatar videos, explainer videos, festival creatives, and short-form marketing content using AI tools.</p><div class="tags"><span class="tag">Product Videos</span><span class="tag">Ad Creatives</span><span class="tag">Reels & Shorts</span><span class="tag">Explainer Videos</span><span class="tag">AI Avatars</span></div></div><div class="card reveal"><div class="icon">🖼️</div><h3>AI Image Creation</h3><p>I create product images, campaign posters, social media graphics, brand visuals, model images, concept art, festive designs, banners, thumbnails, and e-commerce creatives with AI.</p><div class="tags"><span class="tag">Product Images</span><span class="tag">Social Posts</span><span class="tag">Campaign Posters</span><span class="tag">Thumbnails</span><span class="tag">Brand Visuals</span></div></div><div class="card reveal"><div class="icon">✨</div><h3>Creative Marketing Content</h3><p>I combine AI-generated visuals with marketing strategy to create attention-grabbing content for Meta Ads, Google campaigns, Shopify stores, Instagram, Facebook, YouTube, and other digital platforms.</p><div class="tags"><span class="tag">Meta Ads</span><span class="tag">Shopify Creatives</span><span class="tag">Campaign Concepts</span><span class="tag">Content Variations</span><span class="tag">Visual Storytelling</span></div></div></div></div></section>
+<section id="ai"><div class="center reveal"><div class="eyebrow">AI Creative Studio</div><h2>Creative content that helps your ads stand out.</h2><p>I use AI-powered creative tools to help businesses produce fresh visual content for advertising, social media and promotions.</p></div>
+<div class="grid">
+<div class="card ai reveal"><div class="icon">🖼️</div><h3>AI Images</h3><p>Product visuals, promotional images, social media creatives, ad concepts, campaign graphics and branded visual content.</p><div class="pills"><span class="pill">Product Visuals</span><span class="pill">Ads</span><span class="pill">Social</span><span class="pill">Branding</span></div></div>
+<div class="card ai reveal"><div class="icon">🎬</div><h3>AI Videos</h3><p>Short-form promotional videos, reels, product videos, advertising concepts, explainers and engaging visual content.</p><div class="pills"><span class="pill">Reels</span><span class="pill">Promotional</span><span class="pill">Product</span><span class="pill">Ads</span></div></div>
+<div class="card ai reveal"><div class="icon">✨</div><h3>Ad Creative Concepts</h3><p>Multiple creative directions for campaigns so businesses can test different messages, hooks and visual approaches.</p><div class="pills"><span class="pill">Hooks</span><span class="pill">Creative Testing</span><span class="pill">Meta</span></div></div>
+</div></section>
 
-<section id="contact"><div class="contact"><div class="contact-box reveal"><h2 class="section-title">Let’s create growth.</h2><p class="section-sub">Open to Shopify development, digital marketing, e-commerce management, AI video creation, AI image creation, and growth-focused roles.</p><div class="tags"><span class="tag">Rajkot, Gujarat</span><span class="tag">Open to Opportunities</span></div></div><div class="contact-box reveal"><h3 style="font-size:28px;margin-bottom:20px">Contact</h3><p style="line-height:2;color:var(--muted)">Email: <a style="color:var(--cyan)" href="mailto:purvichhatbar99@gmail.com">purvichhatbar99@gmail.com</a><br>Phone: <a style="color:var(--cyan)" href="tel:+919998383663">+91 99983 83663</a><br>Location: Rajkot, India</p></div></div></section>
-<footer>© 2026 Purvi Chhatbar — Digital Marketing & Shopify Portfolio</footer>
+<section><div class="center reveal"><div class="eyebrow">Why work with me</div><h2>A freelancer who works with your business, not just your account.</h2></div>
+<div class="why">
+<div class="card reveal"><h3>🎯 Goal-focused</h3><p>I start with what the business wants to achieve and connect marketing activities to that objective.</p></div>
+<div class="card reveal"><h3>📊 Data-aware</h3><p>I use campaign and analytics data to identify what is working and where improvements are needed.</p></div>
+<div class="card reveal"><h3>🤝 Direct communication</h3><p>You work directly with me, making communication faster and keeping the marketing process personal.</p></div>
+<div class="card reveal"><h3>⚡ Flexible support</h3><p>Get support for a specific campaign or ongoing digital marketing management based on your business needs.</p></div>
+</div></section>
+
+<section id="contact"><div class="contact reveal"><div class="eyebrow">Let's grow your business</div><h2>Tell me what you want to achieve.</h2><p>Whether you need more leads, better ad performance, stronger social media presence or a complete digital marketing strategy, let's discuss your business and find the right next step.</p><div class="buttons" style="justify-content:center"><a class="btn primary" href="mailto:purvichhatbar99@gmail.com?subject=Digital Marketing Consultation">Book a Free Consultation →</a><a class="btn secondary" href="tel:+919998383663">Call +91 9998383663</a></div><p style="font-size:13px;margin-top:24px">Rajkot, Gujarat · purvichhatbar99@gmail.com</p></div></section>
+<footer>© 2026 Purvi Chhatbar · Freelance Digital Marketing & Performance Marketing</footer>
+
 <script>
-document.addEventListener('mousemove',e=>{document.documentElement.style.setProperty('--mx',e.clientX+'px');document.documentElement.style.setProperty('--my',e.clientY+'px')});
-const els=document.querySelectorAll('.reveal');
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')}),{threshold:.14});
-els.forEach(el=>io.observe(el));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 </body>
 </html>
